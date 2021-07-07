@@ -31,6 +31,23 @@ public:
 	}
 };
 
+/*动态规划
+class Solution{
+public:
+	int minimumTotal(vector<vector<int>>& triangle){
+		auto memo = triangle;
+
+		for(int i = memo.size() - 2; i >= 0; i--){
+			for(int j = 0; j < memo[i].size(); j++){
+				memo[i][j] = min(memo[i+1][j], memo[i+1][j + 1]) + memo[i][j];
+			}
+		}
+		
+		return memo[0][0];
+	}
+};
+*/
+
 int main(){
 	vector<vector<int>> arr{{2}, {3,4},{6,5,7},{4,1,8,3}};
 
