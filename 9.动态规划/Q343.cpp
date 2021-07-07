@@ -27,6 +27,25 @@ public:
     }
 };
 
+/*
+class Solution {
+public:
+    int integerBreak(int n) {
+    	if(n == 1 || n == 2)
+    		return 1;
+    	vector<int> memo(n+1, -1);
+
+    	for(int i = 1; i <= n; i++){
+			for(int j = 1; j < i; j++){
+				int tmp = max(memo[j], j) * max(memo[i-j], i-j);
+				memo[i] = memo[i] > tmp ? memo[i] : tmp;
+			}
+    	}
+		return memo[n];
+    }
+};
+*/
+
 int main(){
 	Solution s;
 	cout << s.integerBreak(58) << endl;
